@@ -1,0 +1,249 @@
+/* download google fonts roboto another you need */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* css variables */
+
+:root{
+    --primary-color: #F78F7D;
+    --secondary-color: #F6BCAD;
+    --info-color: #FFDCD4;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    position: relative;
+    height: 83px;
+    width: 100%;
+}
+
+nav {
+    height: 83px;
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.brand{
+    color: #021300;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 900;
+    margin-left: 20px;
+
+}
+
+.brand-text{
+    color: var(--primary-color);
+}
+
+.navigation-bar ul{
+    margin: 0px;
+    padding: 0px;
+}
+.navigation-bar ul li{
+    display: inline-block;
+    margin: 0px 25px;
+}
+
+.navigation-bar ul li:last-child{
+    margin-right: 0px;
+}
+
+.navigation-bar ul li a{
+    color: #222222;
+    font-size: 14px;
+    font-weight: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.navigation-bar ul li a:hover{
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    color: #222222;
+    background-color: var(--info-color);
+    border-radius: 5px;
+    font-weight: normal;
+    font-weight: 600;
+
+}
+.navigation-bar ul li a.btn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.burger{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.burger span {
+    display: block;
+    margin-bottom: 3px;
+    height: 3px;
+    color: #021300;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+@media(min-width: 991px ){
+    .navigation-bar{
+        display: block !important;
+    }
+}
+
+@media(max-width: 991px){
+    .burger{
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+    .navigation-bar{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        background-color: var(--info-color);
+        padding: 20px 0;
+        text-align: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    .navigation-bar ul li{
+        display: block;
+        margin: 15px 0;
+    }
+    .navigation-bar ul li a.btn{
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+}
+
+.navigation-bar.active{
+    display: flex;
+}
+
+#home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    max-width: 100%;
+
+}
+
+#home-content .content-left{
+    padding: 30px;
+
+}
+#home-content h1{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+#home-content p{
+    margin-bottom: 20px;
+}
+
+#home-content .content-left .btn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#home-content img{
+    width: 500px;
+    height: 500px;
+}
+
+/* Responsive */
+
+@media(max-width: 767px){
+    #home-content{
+        flex-direction: column-reverse;
+
+    }
+    #home-content .content-right{
+        position: relative;
+        top: 5px;
+        left: 0;
+    }
+    #home-content .content-right img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0;
+    }
+
+    #home-content .content-left{
+        position: relative;
+        top: 5px;
+    }
+    #hom-content .content-left h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    #hom-content .content-left p{
+        font-size: 12px;
+        
+    }
+}
+
+
+@media(min-width: 768px) and (max-width: 1024px){
+    #home-content .content-right{
+        position: relative;
+        top: 0px;
+        left: 0;
+    }
+    #home-content .content-right img{
+        width: 400px;
+        height: 400px;
+        margin-bottom: 0px;
+    }
+
+    #home-content .content-left{
+        position: relative;
+        top: 5%;
+    }
+    #hom-content .content-left h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    #hom-content .content-left p{
+        margin-bottom: 20px;
+        display: block;
+        font-size: 20px;
+        
+    }
+}
